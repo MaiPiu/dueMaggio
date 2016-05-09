@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+<!doctype html>
+{% block title %}{{ section.title }}{% endblock %}
+
+{% block content %}
+  <div id="header">
+    
+   
+        <h1>{{ section.text }}</h1>
+  </div>
+  <div id="content">
+        {% for  piz in lista %}
+        <p><b>Nome pizza: </b>{{piz.nome}} <br> <b>Descrizione: </b>{{piz.descrcizione}} <br><br> <a href="{{piz.fotoUrl}}">Link alla foto della pizza</a></p>
+        {% endfor %}
+  </div>
+  <div id="footer">
+        <p>- Fine elenco -</p>
+  </div>
+  
+{% endblock %}
